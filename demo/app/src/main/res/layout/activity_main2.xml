@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bdc3c7"
+    tools:context=".MainActivity2">
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:text="Remote Android Device"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="50px"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHeight_percent=".1"/>
+    <ListView
+        android:id="@+id/tvBrandListView"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:background="#bdc3c7"
+        app:layout_constraintTop_toBottomOf="@+id/tv2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHeight_percent=".8"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"/>
+    <ImageButton
+        android:background="@drawable/item_background"
+        app:layout_constraintHeight_percent=".1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/ac2_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
