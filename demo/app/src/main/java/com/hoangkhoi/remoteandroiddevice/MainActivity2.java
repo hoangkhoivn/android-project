@@ -62,52 +62,5 @@ public class MainActivity2 extends Activity {
             });
         }
     }
-    /*
-    private void showAddRecordDialog(String title) {
-        // Create an instance of LayoutInflater
-        LayoutInflater inflater = LayoutInflater.from(this);
-        // Inflate the custom layout/dialog_add_record
-        View dialogView = inflater.inflate(R.layout.dialog_add_record, null);
 
-        // Create AlertDialog builder
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setView(dialogView);
-
-        // Get the EditText fields from the dialog
-        final EditText editTextName = dialogView.findViewById(R.id.editTextName);
-        final EditText editTextValue = dialogView.findViewById(R.id.editTextValue);
-        editTextName.setText(title);
-        // Set up the dialog buttons
-        builder.setPositiveButton("Add", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                String name = editTextName.getText().toString();
-                String value = editTextValue.getText().toString();
-                // Add the record to the database
-                long result = dbHelper.insertIntoTable2(name, value);
-                if (result != -1) {
-                    Toast.makeText(MainActivity2.this, "Record added", Toast.LENGTH_SHORT).show();
-                    // Tạo TvBrandAdapter tùy chỉnh
-                    ArrayList<String>  tvBrands = dbHelper.readTable("table2","");
-                    adapter = new TvBrandAdapter(MainActivity2.this, tvBrands,bundle.getString("key1"));
-                    // Thiết lập adapter cho ListView
-                    tvBrandListView.setAdapter(adapter);
-                    adapter.notifyDataSetChanged();
-                } else {
-                    Toast.makeText(MainActivity2.this, "Error adding record", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-
-        // Create and show the dialog
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }*/
 }
